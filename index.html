@@ -10,7 +10,8 @@
     <meta property="og:image" content="img/darklogo.png">
     <meta property="og:url" content="https://www.alphatraininglab.net">
     <link rel="canonical" href="https://www.alphatraininglab.net">
-    <title>Alpha Training Lab</title>
+    <link rel="icon" href="img/2024-11-16 11.23.32.png" type="image/png">
+    <title>Alpha Training Lab - Your leverage to the better you seek.</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="universal.css">
     <link rel="stylesheet" href="css/responsiveness/index.css">
@@ -19,18 +20,27 @@
     <header>
         <img src="img/darklogo.png" alt="logo image">
         <nav>
-            <a href="index.html">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Testimonials</a>
-            <a href="#">Key Players</a>
-            <a href="#">Blog</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Testimonials</a>
+                <a href="#">Key Players</a>
+                <a href="#">Blog</a>
+            </div>
         </nav>
         <div class="portal-access">
-            <button class="sec-btn">Log In</button>
-            <button class="pri-btn">Become a member <img src="img/icon/ArrowRight.svg"></button>
+            <div class="btn">
+                <button class="sec-btn">Log In</button>
+                <button class="pri-btn">Become a member <img src="img/icon/ArrowRight.svg"></button>
+            </div>
+            <!-- << menu icon >> -->
+            <div class="menuicon" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
-    <!-- << just because >> -->
     <main>
         <section class="hero-sec">
             <div class="top">
@@ -41,7 +51,7 @@
                     <button class="pri-btn">Become a member</button>
                 </div>
             </div>
-            <img src="img/heroimg.jpg" alt="image of HOWP6">
+            <img src="img/heroimg.jpg" alt="image of HOWP6" class="hero-image">
         </section>
         <section class="sec1">
             <h2>Become part of a <span style="color: #f06105;">community</span> that <span style="color: #f06105;">works</span></h2>
@@ -115,41 +125,42 @@
                     <div class="header">
                         <img src="#" alt="icon">
                         <div class="right">
-                            <h5>John Doe</h5>
-                            <p>Trader</p>
+                            <h5>Onyeka O</h5>
+                            <!-- <p>Trader</p> -->
                         </div>
                     </div>
-                    <p>ATL ( Alpha Training Lab) Is not just an institution of learning how trade digital curruncies, but it is home, it has shaped me and it has been a blessing to my life.</p>
+                    <p>ATL (Alpha Training Lab) Is not just an institution for learning how to trade digital currencies, but it is home. It has shaped me and it has been a blessing to my life.
+                    </p>
                 </div>
                 <div class="test">
                     <div class="header">
                         <img src="#" alt="icon">
                         <div class="right">
-                            <h5>John Doe</h5>
-                            <p>Trader</p>
+                            <h5>Irene Nwachukwu</h5>
+                            <!-- <p>Trader</p> -->
                         </div>
                     </div>
-                    <p>ATL ( Alpha Training Lab) Is not just an institution of learning how trade digital curruncies, but it is home, it has shaped me and it has been a blessing to my life.</p>
+                    <p>Alpha Training Lab (ATL) is the place to be. Joining the family has not only improved my knowledge, I have also adopted a healthier lifestyle especially where money is concerned.</p>
                 </div>
                 <div class="test">
                     <div class="header">
                         <img src="#" alt="icon">
                         <div class="right">
-                            <h5>John Doe</h5>
-                            <p>Trader</p>
+                            <h5>Festus Damilola</h5>
+                            <!-- <p>Trader</p> -->
                         </div>
                     </div>
-                    <p>ATL ( Alpha Training Lab) Is not just an institution of learning how trade digital curruncies, but it is home, it has shaped me and it has been a blessing to my life.</p>
+                    <p>ATL is a place where a visionless person becomes one that has a wonderful vision, a home for goal setters and achievers, a place where what people pay thousands of naira or whatever currency to get are gotten for free. ATL is not just a community, it is home to its members. I love ATL.</p>
                 </div>
                 <div class="test">
                     <div class="header">
                         <img src="#" alt="icon">
                         <div class="right">
-                            <h5>John Doe</h5>
-                            <p>Trader</p>
+                            <h5>Damilola Oluwatosin</h5>
+                            <!-- <p>Trader</p> -->
                         </div>
                     </div>
-                    <p>ATL ( Alpha Training Lab) Is not just an institution of learning how trade digital curruncies, but it is home, it has shaped me and it has been a blessing to my life.</p>
+                    <p>All we go through in life is designed to shape us so we can be equipped to become who we should be, ATL was pivotal to several mental shifts that added ease to my journey and of course after I joined ATL, I was able to achieve my financial goals.</p>
                 </div>
             </div>
         </section>
@@ -187,13 +198,13 @@
                     <p>“In life, you can not ascend to a higher level without a clearer view; you will fall faster than you climbed. Some seemingly unpalatable events are needed for an upgrade in life.”</p>
                     <cite>Prof Awe Olaleye - ATL Co-Founder</cite>
                 </blockquote>
-                <button class="pri-btn">Join Us <img src="img/icon/ArrowRight.svg"></button>
+                <button class="pri-btn">Become a member <img src="img/icon/ArrowRight.svg"></button>
             </div>
         </section>
     </main>
     <footer>
         <div class="top">
-            <img src="img/darklogo.png" alt="logo">
+            <img src="img/2024-11-16 11.23.32.png" alt="logo">
             <p>Providing global, inclusive, and supportive online community that fosters personal and professional growth through 
                 collaboration, engagement and innovation</p>
             <div class="socials">
@@ -223,5 +234,6 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/index.js"></script>
 </body>
 </html> 

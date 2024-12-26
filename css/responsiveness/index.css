@@ -1,0 +1,323 @@
+/* Styles for screens smaller than 950px */
+@media (max-width: 1020px) {
+    /* Adjust hero section */
+    .hero-sec .top{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .hero-sec .top h1 {
+        font-size: 40px;
+        text-align: center; 
+        width: 80%;
+        line-height: 3rem;
+    }
+    
+
+    .hero-sec .top .top-ryt {
+        width: 80%;
+        text-align: center;
+    }
+
+    .hero-sec .top .top-ryt {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .hero-sec img {
+        height: 350px;
+        border-radius: 10px;
+    }
+
+    .top-ryt {
+        text-align: center; 
+    }
+
+    /* .sec1, .sec2, .sec3, .sec4 {
+        padding: 20px; 
+    } */
+
+    /* .sec1 img, .sec2 img, .sec3 img {
+        width: 100%; 
+        height: auto;
+    } */
+
+    .sec1  h2 {
+        font-size: 32px;
+    }
+
+    .sec1 .lowersec {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 50px;
+    }
+
+    .secq .lowersec .leftlower .row h5 {
+        font-size: 24px;
+    }
+
+    .sec1 .lowersec img {
+        width: 100%;
+        /* height: 500px; */
+    }
+
+
+    /* --------------------------------------------- */
+    /* << third section styling adjustment starts here >> */
+    .sec2 .header p {
+        font-size: 12px;
+    }
+    
+    .sec2 .header h2 {
+        font-size: 32px;
+    }
+
+    .sec2 .steps {
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .sec2 .steps .step .text h5 {
+        font-size: 24px;
+    }
+
+
+
+    /* ---------------------------------------------- */
+    /* << fourth section styling adjustment starts here >> */
+    .sec3 .header .left h2 {
+        font-size: 32px;
+    }
+
+    .sec3 .header .left {
+        width: 60%;
+    }
+
+    .sec3 .tests {
+        flex-direction: column;
+    }
+
+
+
+
+    /* ------------------------------------------------------- */
+    /* << fifth section syting adjustments starts here >> */
+    .sec4 .header .left {
+        width: 50%;
+    }
+
+    .sec4 .header .left h2 {
+        font-size: 32px;
+    }
+
+
+    /* --------------------------------------------- */
+    .sec5 .cont {
+        padding: 100px 10%;
+    }
+    
+    .sec5 .cont h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .sec5 .cont button {
+        width: 300px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------- */
+/* Styles for screens smaller than 450px */
+@media (max-width: 450px) {
+    main {
+        width: 100%;
+    }
+    
+    section {
+        width: 100%;
+    }
+
+    .hero-sec .top h1 {
+        font-size: 32px !important;
+        line-height: 2.3rem;
+    }
+
+    .hero-sec .top .top-ryt {
+        width: 90%;
+        font-size: 14px;
+        /* margin: 0px 50px; */
+    }
+
+    .hero-sec .top .top-ryt button {
+        width: 65%;
+    }
+
+    .hero-sec img {
+        height: 500px;
+    }
+
+    .hero-image {
+        content: url(../../img/mobile.jpg);
+    }
+
+
+
+    /* << first section adjustment starts here >> */
+    .sec1 {
+        width: 1005;
+    }
+    
+    .sec1 h2 {
+        font-size: 24px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .sec1 .lowersec {
+        padding: 0px;
+    }
+
+    .sec1 .lowersec img {
+        border-radius: 10px;
+    }
+
+    .sec1 .lowersec .leftlower .row h5 {
+        font-size: 20px;
+    }
+
+
+    .steps {
+        flex-direction: column; 
+    }
+
+    .step {
+        margin-bottom: 20px; 
+    }
+
+
+
+
+    /* << section section adjusts starts here >> */
+    .sec2 .header h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .sec2 .steps {
+        padding: 0px;
+    }
+
+    .steps .step img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .step {
+        border-radius: 10px;
+    }
+
+    .step .text h5 {
+        font-size: 20px !important;
+    }
+
+
+    /* << third section adjusts starts here >> */
+    .sec3 .header button {
+        display: none;
+    }
+
+    .sec3 .header .left {
+        width: 90%;
+    }
+
+    .sec3 .header .left h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .test {
+        border-radius: 10px;
+    }
+
+    .test .header .right h5 {
+        font-size: 16px;
+    }
+
+    .test p {
+        font-size: 14px;
+    }
+
+
+    /* << fourth section adjustments starts here >> */
+    .sec4 .header .left {
+        width: 90%;
+    }
+    
+    .sec4 .header .left h2 {
+        font-size: 24px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .sec4 .header button {
+        display: none;
+    }
+
+    .insights {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .insight {
+        width: 100%;
+    }
+
+
+    /* << fifth section adjustments starts here >> */
+    .sec5 {
+        width: 100%;
+        padding: 50px 15px 100px 15px;
+    }
+
+    .sec5 .cont {
+        width: 100%;
+        padding: 100px 5%;
+    }
+
+    .sec5 .cont h2 {
+        font-size: 32px;
+        width: 100%;
+    }
+
+    .sec5 .cont blockquote p {
+        font-size: 12px;
+    }
+
+    .sec5 .cont blockquote cite {
+        font-size: 14px;
+    }
+
+    .sec5 .cont button {
+        width: 80%;
+    }
+
+
+}
