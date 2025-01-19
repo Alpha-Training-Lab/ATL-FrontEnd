@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles (minimal to avoid conflicts with Tailwind) */
+:root {
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply text-priText bg-bgColor m-0 p-0 w-full overflow-x-hidden;
+}
+
+a {
+  @apply font-medium text-priText no-underline;
+}
+
+a:hover {
+  @apply text-primary;
+}
+
+button {
+  @apply rounded-full px-[30px] py-[10px] font-medium transition-all cursor-pointer;
+}
+
+button:hover {
+  @apply bg-gray-100 border-gray-300;
+}
+
+button:focus-visible {
+  @apply outline outline-primary outline-2;
+}
+
+/* Light mode styles */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #213547;
+    --bg-color: #ffffff;
+  }
+
+  body {
+    @apply bg-white text-[#213547];
+  }
+
+  a:hover {
+    @apply text-primary;
+  }
+
+  button {
+    @apply bg-gray-100 text-[#213547];
+  }
+}
