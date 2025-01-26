@@ -11,7 +11,7 @@ const Header = ({ isLoggedIn }) => {
   };
 
   return (
-    <header className="fixed top-0 left-0 flex justify-between items-center w-screen px-[15px] md:px-[30px] lg:px-[60px] py-[10px] border-b border-solid bg-white">
+    <header className="fixed top-0 left-0 flex justify-between items-center w-full px-[15px] md:px-[30px] lg:px-[60px] py-[10px] border-b border-solid bg-white">
       {/* Logo section */}
       <div className="w-[50px] h-[50px] flex items-center justify-center">
         <img 
@@ -42,7 +42,7 @@ const Header = ({ isLoggedIn }) => {
             </SecondaryButton>
             <div className="hidden md:block">
               <PrimaryButton onClick={() => console.log('Create Account clicked')}>
-                Create Account
+                Become a member
               </PrimaryButton>
             </div>
           </div>

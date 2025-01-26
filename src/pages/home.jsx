@@ -7,7 +7,7 @@ const Home = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col w-full">
       <Header isLoggedIn={isLoggedIn} />
       <Main />
       <Footer />
