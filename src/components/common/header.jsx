@@ -1,8 +1,12 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { PrimaryButton, SecondaryButton } from './Buttons';
 import Menu from './Menu';
 import logo from '../../assets/images/logos/darklogo.png';
 
+
+// Imports ends here
+// ------------=======================-----------
 const Header = ({ isLoggedIn }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
@@ -25,8 +29,8 @@ const Header = ({ isLoggedIn }) => {
       <div className="flex items-center gap-[2px] md:gap-[20px]">
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-4">
-          <a href="#" className="hover:text-primary">Home</a>
-          <a href="#" className="hover:text-primary">About</a>
+          <Link to="/" className='hover:text-primary'>Home</Link>
+          <Link to="/about" className='hover:text-primary'>About</Link>
           <a href="#" className="hover:text-primary">Services</a>
           <a href="#" className="hover:text-primary">Contact</a>
         </nav>
