@@ -1,5 +1,9 @@
+import { Link } from 'react-router-dom';
 import { SecondaryButton } from './Buttons';
 
+
+// Imports ends here
+// ------------=======================-----------
 const Menu = ({ isOpen, onClose, isLoggedIn }) => {
   return (
     <div 
@@ -18,8 +22,8 @@ const Menu = ({ isOpen, onClose, isLoggedIn }) => {
 
         {/* Menu items */}
         <nav className="flex flex-col gap-4 text-white px-[5px] gap-[30px] px-[20px] mt-4">
-          <a href="#" className="hover:opacity-80">Home</a>
-          <a href="#" className="hover:opacity-80">About</a>
+          <Link to="/" className='hover:text-primary'>Home</Link>
+          <Link to="/about" className='hover:text-primary'>About</Link>
           <a href="#" className="hover:opacity-80">Services</a>
           <a href="#" className="hover:opacity-80">Contact</a>
           {/* Create Account button - only show if not logged in */}
