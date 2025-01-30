@@ -8,7 +8,7 @@ import { PrimaryButton } from '../components/common/Buttons';
 // importing images
 import Prof from '../assets/images/Keyplayerspg/PROF.jpg';
 import Mama from '../assets/images/Keyplayerspg/Mrs Awe.jpg';
-import Shemmy from '../assets/images/Keyplayerspg/Shemmy.jpg';
+// import Shemmy from '../assets/images/Keyplayerspg/Shemmy.jpg';
 import Olive from '../assets/images/Keyplayerspg/obt.jpg';
 import newOBT from '../assets/images/Keyplayerspg/iti.jpg';
 import davidWizz from '../assets/images/Keyplayerspg/Doke.jpg';
@@ -54,7 +54,7 @@ const KeyplayersPage = () => {
             role: "Co-Director of Lecture Planning",
         },
         {
-            image: <img src={Shemmy} alt="#" className="rounded-[20px] w-[100%] h-[100%] object-cover" />,
+            image: <img src={ATL} alt="#" className="rounded-[20px] w-[100%] h-[100%] object-cover" />,
             name: "Isreal Monyei",
             role: "Co-Director of Onboarding",
         },
