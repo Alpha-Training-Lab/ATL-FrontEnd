@@ -28,24 +28,26 @@ const Header = ({ isLoggedIn }) => {
       {/* Navigation and buttons */}
       <div className="flex items-center gap-[2px] md:gap-[20px]">
         {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center gap-4">
+        <nav className="hidden lg:flex lg:items-center gap-[20px]">
           <Link to="/" className='hover:text-primary'>Home</Link>
           <Link to="/about" className='hover:text-primary'>About</Link>
-          <a href="#" className="hover:text-primary">Services</a>
-          <a href="#" className="hover:text-primary">Contact</a>
+          <Link to='/maintenance' className='hover:text-primary'>Testimonials</Link>
+          <Link to="/Key players" className='hover:text-primary'>Key Players</Link>
+          <Link to='/maintenance' className='hover:text-primary'>Blog</Link>
+          <Link to='/maintenance' className='hover:text-primary'>Reach out</Link>
         </nav>
 
         {/* Auth Buttons - only show if not logged in */}
         {!isLoggedIn && (
           <div className="flex items-center">
             <SecondaryButton 
-              onClick={() => console.log('Login clicked')}
+              onClick={() => window.location.href = '/maintenance'}
               className="border-0 hover:border hover:border-solid hover:border-grey-900"
             >
-              Log In
+              <Link to='/maintenance'>Log In</Link>
             </SecondaryButton>
             <div className="hidden md:block">
-              <PrimaryButton onClick={() => console.log('Create Account clicked')}>
+              <PrimaryButton onClick={() => window.location.href = '/maintenance'}>
                 Become a member
               </PrimaryButton>
             </div>
@@ -53,7 +55,7 @@ const Header = ({ isLoggedIn }) => {
         )}
 
         {/* Hamburger Menu for Mobile */}
-        <div className="menuicon flex flex-col justify-between h-6 w-8 md:hidden p-[2px]" onClick={toggleMenu}>
+        <div className="menuicon flex flex-col justify-between h-6 w-8 lg:hidden p-[2px]" onClick={toggleMenu}>
           <span className="w-full h-[2px] bg-black"></span>
           <span className="w-full h-[2px] bg-black"></span>
           <span className="w-full h-[2px] bg-black"></span>

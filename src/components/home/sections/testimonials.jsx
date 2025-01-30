@@ -43,7 +43,7 @@ const Testimonials = () => {
           </h2>
         </div>
         <div>
-          <SecondaryButton className='hidden md:block'>
+          <SecondaryButton className='hidden md:block ' onClick={() => window.location.href = '/maintenance'}>
             See more
           </SecondaryButton>
         </div>
