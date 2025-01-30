@@ -7,7 +7,7 @@ import { SecondaryButton } from './Buttons';
 const Menu = ({ isOpen, onClose, isLoggedIn }) => {
   return (
     <div 
-      className={`fixed top-0 right-0 h-screen w-[250px] bg-primary transform transition-transform duration-300 ease-in-out rounded-l-[10px] ${
+      className={`fixed top-0 right-0 h-screen w-[350px] md:w-[600px] bg-primary transform transition-transform duration-300 ease-in-out rounded-l-[10px] ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
@@ -21,16 +21,18 @@ const Menu = ({ isOpen, onClose, isLoggedIn }) => {
         </button>
 
         {/* Menu items */}
-        <nav className="flex flex-col gap-4 text-white px-[5px] gap-[30px] px-[20px] mt-4">
-          <Link to="/" className='hover:text-primary'>Home</Link>
+        <nav className="flex flex-col items-end  gap-4 text-white px-[20px] pl-[50px] md:pl-[250px] gap-[30px] px-[20px] mt-4">
+        <Link to="/" className='hover:text-primary'>Home</Link>
           <Link to="/about" className='hover:text-primary'>About</Link>
-          <a href="#" className="hover:opacity-80">Services</a>
-          <a href="#" className="hover:opacity-80">Contact</a>
+          <Link to='/maintenance' className='hover:text-primary'>Testimonials</Link>
+          <Link to="/Key players" className='hover:text-primary'>Key Players</Link>
+          <Link to='/maintenance' className='hover:text-primary'>Blog</Link>
+          <Link to='/maintenance' className='hover:text-primary'>Reach out</Link>
           {/* Create Account button - only show if not logged in */}
           {!isLoggedIn && (
             <SecondaryButton 
               onClick={() => console.log('Become a member clicked')}
-              className="bg-white text-priText border-white hover:bg-white/10 w-full mt-[20px]"
+              className="bg-white text-priText border-white hover:bg-white/10 w-full mt-[20px] md:hidden"
             >
               Become a member
             </SecondaryButton>

@@ -28,7 +28,7 @@ const Blog = () => {
           </h2>
         </div>
         <div>
-          <SecondaryButton className='hidden md:block'>
+          <SecondaryButton className='hidden md:block' onClick={() => window.location.href = '/maintenance'}>
             Read more
           </SecondaryButton>
         </div>
