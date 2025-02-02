@@ -31,9 +31,9 @@ const Header = ({ isLoggedIn }) => {
         <nav className="hidden lg:flex lg:items-center gap-[20px]">
           <Link to="/" className='hover:text-primary'>Home</Link>
           <Link to="/about" className='hover:text-primary'>About</Link>
-          <Link to='/maintenance' className='hover:text-primary'>Testimonials</Link>
+          <Link to='/testimonial' className='hover:text-primary'>Testimonials</Link>
           <Link to="/Key players" className='hover:text-primary'>Key Players</Link>
-          <Link to='/maintenance' className='hover:text-primary'>Blog</Link>
+          <Link to='/blog' className='hover:text-primary'>Blog</Link>
           <Link to='/maintenance' className='hover:text-primary'>Reach out</Link>
         </nav>
 

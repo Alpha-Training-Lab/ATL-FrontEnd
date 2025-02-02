@@ -42,7 +42,7 @@ const HeroSection = () => {
               Providing global, inclusive, and supportive online community that fosters personal and professional growth through collaboration, engagement, and innovation – One person at a time.
             </p>
             <div className="flex gap-4">
-              <PrimaryButton onClick={() => window.location.href = '/maintenance'}>
+              <PrimaryButton onClick={() => window.location.href = '/redirection'}>
                 Become a member
               </PrimaryButton>
             </div>
