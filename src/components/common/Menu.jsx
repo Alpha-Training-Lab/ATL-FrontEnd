@@ -22,12 +22,12 @@ const Menu = ({ isOpen, onClose, isLoggedIn }) => {
 
         {/* Menu items */}
         <nav className="flex flex-col items-end  gap-4 text-white px-[20px] pl-[50px] md:pl-[250px] gap-[30px] px-[20px] mt-4">
-        <Link to="/" className='hover:text-primary'>Home</Link>
-          <Link to="/about" className='hover:text-primary'>About</Link>
-          <Link to='/maintenance' className='hover:text-primary'>Testimonials</Link>
-          <Link to="/Key players" className='hover:text-primary'>Key Players</Link>
-          <Link to='/maintenance' className='hover:text-primary'>Blog</Link>
-          <Link to='/maintenance' className='hover:text-primary'>Reach out</Link>
+        <Link to="/" className='hover:text-white hover:pr-[20px]'>Home</Link>
+          <Link to="/about" className='hover:text-white hover:pr-[20px]'>About</Link>
+          <Link to='/testimonial' className='hover:text-white hover:pr-[20px]'>Testimonials</Link>
+          <Link to="/Key players" className='hover:text-white hover:pr-[20px]'>Key Players</Link>
+          <Link to='/blog' className='hover:text-white hover:pr-[20px]'>Blog</Link>
+          <Link to='/maintenance' className='hover:text-white hover:pr-[20px]'>Reach out</Link>
           {/* Create Account button - only show if not logged in */}
           {!isLoggedIn && (
             <SecondaryButton 

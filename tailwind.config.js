@@ -12,7 +12,9 @@ export default {
         priText: '#131313',
         bgColor: '#FFFFFF',
         stepsBgColor: '#032624',
-        OtherBgColor: '#FBFBFB'
+        OtherBgColor: '#FBFBFB',
+        DangerBg: '#F6D0D0',
+        RedColor: '#A12222'
       },
       fontFamily: {
         figtree: ['Figtree', 'sans-serif'],

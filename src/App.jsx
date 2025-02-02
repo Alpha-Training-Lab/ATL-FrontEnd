@@ -3,11 +3,11 @@ import HomePage from './pages/home';
 import AboutPage from './pages/about';
 import KeyplayersPage from './pages/teams';
 import MaintenancePage from './pages/maintainance';
-// import { useAuth } from './context/AuthContext';
+import RedirectionPage from './pages/redirection';
+import TestimonialsPage from './pages/testimonials';
+import BlogPage from './pages/blog';
 
 function App() {
-  // const { isLoggedIn } = useAuth();
-
   return (
     <div>
       <Routes>
@@ -15,6 +15,9 @@ function App() {
         <Route path='/about' element={<AboutPage />} />
         <Route path='/Key players' element={<KeyplayersPage />} />
         <Route path='/Maintenance' element={<MaintenancePage />} />
+        <Route path='/testimonial' element={<TestimonialsPage />} />
+        <Route path='/blog' element={<BlogPage />} /> 
+        <Route path='/redirection' element={<RedirectionPage />} />
       </Routes>
     </div>
   );

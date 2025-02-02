@@ -15,7 +15,7 @@ const CTA = () => {
           </cite>
         </blockquote>
 
-        <button className="bg-primary px-8 py-2.5 rounded-full hover:bg-gray-100 hover:text-gray-500 flex items-center justify-center gap-2.5 mx-auto" onClick={() => window.location.href = '/maintenance'}>
+        <button className="bg-primary px-8 py-2.5 rounded-full hover:bg-gray-100 hover:text-gray-500 flex items-center justify-center gap-2.5 mx-auto" onClick={() => window.location.href = '/redirection'}>
           Become a member
           {/* <img src="/img/icon/ArrowRight.svg" alt="arrow" /> */}
         </button>
