@@ -31,7 +31,7 @@ const Menu = ({ isOpen, onClose, isLoggedIn }) => {
           {/* Create Account button - only show if not logged in */}
           {!isLoggedIn && (
             <SecondaryButton 
-              onClick={() => console.log('Become a member clicked')}
+              onClick={() => window.location.href ='/ICdirection'}
               className="bg-white text-priText border-white hover:bg-white/10 w-full mt-[20px] md:hidden"
             >
               Become a member

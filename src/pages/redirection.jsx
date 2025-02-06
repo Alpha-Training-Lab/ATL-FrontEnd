@@ -15,7 +15,7 @@ const RedirectionPage = () => {
         <body>
             {/* <Header /> */}
             <main className='w-full flex flex-col justify-center items-center py-[50px] gap-[30px]'>
-                <Link to='/'><img src={Logo} alt='ATL logo' className='w-[50px] h-[50px] md:w-[100px] md:h-[100px]'></img></Link>
+                <Link to='/'><img src={Logo} alt='ATL logo' className='w-[50px] h-[50px] md:w-[70px] md:h-[70px]'></img></Link>
                 <div className='flex flex-col gap-[50px] items-center border  rounded-[20px] m-[20px] p-[20px] py-[50px] md:mx-[10%] lg:mx-[20%] lg:px-[50px] '>
                     <div className='flex flex-col gap-[5px] '>
                         <h3 className='text-[32px] text-center leading-tight md:text-[40px]'>You are One Step Closer</h3>

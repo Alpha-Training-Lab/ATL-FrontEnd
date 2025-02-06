@@ -3,6 +3,8 @@ import Header from '../components/header';
 import CTA from '../components/cta';
 import TestimonialCard from '../components/testimonial';
 import testimonialData from '../data/testimonials';
+import BlogCard from '../components/blog';
+import blogData from '../data/blog';
 import Footer from '../components/footer';
 import { useAuth } from '../context/AuthContext';
 import heroImage from '../assets/images/homeimgs/heromobile.jpg'; 
@@ -21,6 +23,7 @@ const HomePage = () => {
   const { isLoggedIn } = useAuth();
   const [currentImage, setCurrentImage] = useState(heroImage);
   const [shuffledTestimonials, setShuffledTestimonials] = useState([]);
+  const [featuredBlogs, setFeaturedBlogs] = useState([]);
 
 
   // check screen size and switch image sizes based on screensize
@@ -86,6 +89,11 @@ const HomePage = () => {
     setShuffledTestimonials([...testimonialData].sort(() => Math.random() - 0.5).slice(0, 5));
   }, []);
 
+  // Shuffle and pick 3 random blogs for the homepage
+  useEffect(() => {
+    setFeaturedBlogs([...blogData].sort(() => Math.random() - 0.5).slice(0, 2));
+  }, []);
+
 
 
 
@@ -109,7 +117,7 @@ const HomePage = () => {
                   Providing global, inclusive, and supportive online community that fosters personal and professional growth through collaboration, engagement, and innovation – One person at a time.
                 </p>
                 <div className="flex gap-4">
-                  <PrimaryButton onClick={() => window.location.href = '/redirection'}>
+                  <PrimaryButton onClick={() => window.location.href = '/ICredirection'}>
                     Become a member
                   </PrimaryButton>
                 </div>
@@ -190,10 +198,30 @@ const HomePage = () => {
           <div className='overflow-hidden relative w-full'>
             <div className="flex gap-[20px] w-max animate-infinite-scroll">
               {[...shuffledTestimonials, ...shuffledTestimonials].map((testimonial, index) => (
-              // {shuffledTestimonials.map((testimonial, index) => (
                 <TestimonialCard key={index} testimonial={testimonial} />
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* blog section */}
+        <section className="flex flex-col gap-[30px] px-[15px] py-[100px] md:px-[30px] lg:px-[60px]">
+          <div className="flex justify-between items-end">
+            <div className="w-full md:w-[70%] lg:w-[60%]">
+              <h2 className="text-[32px] leading-tight md:text-[40px] lg:text-[48px]">
+                <span className="text-primary">Insights</span> from content <span className="text-primary">writers</span> in the <span className="text-primary">community</span>
+              </h2>
+            </div>
+            <div>
+              <SecondaryButton className='hidden md:block' onClick={() => window.location.href = '/blog'}>
+                Read more
+              </SecondaryButton>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
+            {featuredBlogs.map((blog) => (
+              <BlogCard key={blog.id} blog={blog} />
+            ))}
           </div>
         </section>
 

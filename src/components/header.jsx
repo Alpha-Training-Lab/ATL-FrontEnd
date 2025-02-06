@@ -41,13 +41,13 @@ const Header = ({ isLoggedIn }) => {
         {!isLoggedIn && (
           <div className="flex items-center">
             <SecondaryButton 
-              onClick={() => window.location.href = '/maintenance'}
+              onClick={() => window.location.href = '/login'}
               className="border-0 hover:border hover:border-solid hover:border-grey-900"
             >
               <Link to='/maintenance'>Log In</Link>
             </SecondaryButton>
             <div className="hidden md:block">
-              <PrimaryButton onClick={() => window.location.href = '/maintenance'}>
+              <PrimaryButton onClick={() => window.location.href = '/ICredirection'}>
                 Become a member
               </PrimaryButton>
             </div>
