@@ -6,6 +6,7 @@ import MaintenancePage from './pages/maintainance';
 import RedirectionPage from './pages/redirection';
 import TestimonialsPage from './pages/testimonials';
 import BlogPage from './pages/blog';
+import BlogPost from './pages/blogpost';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Route path='/Maintenance' element={<MaintenancePage />} />
         <Route path='/testimonial' element={<TestimonialsPage />} />
         <Route path='/blog' element={<BlogPage />} /> 
-        <Route path='/redirection' element={<RedirectionPage />} />
+        <Route path='/blog/:slug' element={<BlogPost />} />
+        <Route path='/ICredirection' element={<RedirectionPage />} />
       </Routes>
     </div>
   );
