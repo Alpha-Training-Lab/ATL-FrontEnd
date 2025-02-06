@@ -14,21 +14,21 @@ export default {
         stepsBgColor: '#032624',
         OtherBgColor: '#FBFBFB',
         DangerBg: '#F6D0D0',
-        RedColor: '#A12222'
+        RedColor: '#A12222',
+        greyColor:' #A0A0A0',
       },
       fontFamily: {
         figtree: ['Figtree', 'sans-serif'],
         coolvetica: ['Coolvetica', 'sans-serif'],
       },
       keyframes: {
-        scroll: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': {transform: 'translateX(-50%)'},
+        infiniteScroll: {
+          'from': { transform: 'translateX(0)' },
+          'to': {transform: 'translateX(-50%)'},
         },
       },
       animation: {
-        scroll: 'scroll 25s linear infinite',
-        // 'scroll-large': 'scroll 25s linear infinite',
+        'infinite-scroll': 'infiniteScroll 60s linear infinite',
       }
     },
   },

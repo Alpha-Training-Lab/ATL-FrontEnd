@@ -1,7 +1,7 @@
-import lightlogo from '../../assets/images/logos/lightlogo.png'
-import facebookIcon from '../../assets/svgs/socials svg/social icons.svg'
-import InstagramIcon from '../../assets/svgs/socials svg/gg_facebook-1.svg'
-import XIcon from '../../assets/svgs/socials svg/gg_facebook.svg'
+import lightlogo from '../assets/images/logos/lightlogo.png'
+import facebookIcon from '../assets/svgs/socials svg/social icons.svg'
+import InstagramIcon from '../assets/svgs/socials svg/gg_facebook-1.svg'
+import XIcon from '../assets/svgs/socials svg/gg_facebook.svg'
 
 const Footer = () => {
     const socialLinks = [

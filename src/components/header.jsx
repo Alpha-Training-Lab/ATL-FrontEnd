@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PrimaryButton, SecondaryButton } from './Buttons';
 import Menu from './Menu';
-import logo from '../../assets/images/logos/darklogo.png';
+import logo from '../assets/images/logos/darklogo.png';
 
 
 // Imports ends here
