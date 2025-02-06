@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from '../components/common/header';
-import CTA from '../components/common/cta';
-import Footer from '../components/common/footer';
+import Header from '../components/header';
+import CTA from '../components/cta';
+import Footer from '../components/footer';
 import { useAuth } from '../context/AuthContext';
 import GrowthIcon from '../assets/svgs/aboutpgsvgs/ic2.svg';
 import TransformationIcon from '../assets/svgs/aboutpgsvgs/ic1.svg';

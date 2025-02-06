@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Header from '../components/common/header';
-import CTA from '../components/common/cta';
-import Footer from '../components/common/footer';
+import Header from '../components/header';
+import CTA from '../components/cta';
+import Footer from '../components/footer';
 import { useAuth } from '../context/AuthContext';
-import { PrimaryButton } from '../components/common/Buttons';
+import { PrimaryButton } from '../components/Buttons';
 
 // importing images
 import Prof from '../assets/images/Keyplayerspg/PROF.jpg';
@@ -199,7 +199,7 @@ const KeyplayersPage = () => {
                         <div className='w-full h-[300px] rounded-[20px] overflow-hidden '>{leader.image}</div>
                         <div className='flex flex-col items-center px-[10px] gap-[5px] lg:gap-[10px] '>
                           <h5 className='text-[32px] mb-[-5px] text-center lg:leading-none '>{leader.name}</h5>
-                          <p className='text-[16px] md:text-[18px] text-center leading-none text-grey-500'>{leader.role}</p>
+                          <p className='text-[16px] md:text-[18px] text-center text-greyColor leading-none'>{leader.role}</p>
                         </div>
                     </div>
                 ))}

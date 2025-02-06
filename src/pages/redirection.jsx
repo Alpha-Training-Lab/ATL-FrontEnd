@@ -6,13 +6,11 @@ import React, { Component } from 'react';
 // import Logo from '../../public/darklogo.png';
 import Logo from '/darklogo.png';
 import warningIcon from '../assets/svgs/SealWarning.svg';
-import { PrimaryButton, SecondaryButton } from '../components/common/Buttons';
+import { PrimaryButton, SecondaryButton } from '../components/Buttons';
 import { Link } from 'react-router-dom';
 
 
 const RedirectionPage = () => {
-
-
     return (
         <body>
             {/* <Header /> */}
