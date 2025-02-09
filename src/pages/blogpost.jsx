@@ -1,25 +1,39 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { useParams } from "react-router-dom";
-import blogData from "../data/blog";
 import CTA from "../components/cta";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
+import blogData from "../data/blog";
 // import BlogCard from "../components/blog";
 
 const BlogPost = () => {
   const { slug } = useParams(); // Get slug from URL
+  const [content, setContent] = useState(""); // Store the Markdown content
   const blog = blogData.find((post) => post.slug === slug);
   // const [featuredBlogs, setFeaturedBlogs] = useState([]);
+
+
+  // Fetch the markdown file dynamically
+  useEffect(() => {
+    if (blog) {
+      import(`../data/blogcontent/${blog.slug}.md`)
+        .then((res) => fetch(res.default))
+        .then((response) => response.text())
+        .then((text) => setContent(text))
+        .catch((err) => console.error("Error loading markdown file:", err));
+    }
+  }, [blog]);
 
 
   if (!blog) {
     return <div className="text-center text-red-500">Blog post not found</div>;
   }
 
-
   // ----------=======================------------
   // page design starts here
   return (
-    <body>
+    <div>
         <Header />
         <main className="flex flex-col justify-center items-center py-[100px] gap-[100px]">
           <div>  
@@ -36,7 +50,10 @@ const BlogPost = () => {
                 </div>
               </div>
             </div>
-            <p className="text-lg">{blog.content}</p>
+            {/* Render Markdown Content */}
+            <div className="prose max-w-3xl px-[60px]">
+              <ReactMarkdown>{content}</ReactMarkdown>
+            </div>
           </div>
           <div className="border-t-2 border-black">
             <h3 className="text-[40px]">More to Read</h3>
@@ -50,8 +67,9 @@ const BlogPost = () => {
           <CTA />
         </main>
         <Footer />
-    </body>
+    </div>
   );
 };
+
 
 export default BlogPost;

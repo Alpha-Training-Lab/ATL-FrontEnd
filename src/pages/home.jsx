@@ -101,7 +101,7 @@ const HomePage = () => {
 // ------========================------
 // design starts here
   return (
-    <body>
+    <div>
       <Header isLoggedIn={isLoggedIn} />
       <main className="flex flex-col w-full">
         {/* Hero section */}
@@ -228,7 +228,7 @@ const HomePage = () => {
         <CTA />
       </main>
       <Footer />
-    </body>
+    </div>
   );
 };
 

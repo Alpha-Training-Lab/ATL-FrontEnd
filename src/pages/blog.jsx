@@ -7,10 +7,12 @@ import blogData from '../data/blog';
 
 
 const BlogPage = () => {
+  // const blogs = getAllBlogs();
+
   // ----------===================------------
   // Page design starts here
   return (
-    <body>
+    <div>
       <Header />
       <main className='w-full flex flex-col justify-center items-center px-[15px] md:px-[30px] lg:px-[60px]'>
         {/* Header */}
@@ -28,7 +30,7 @@ const BlogPage = () => {
         <CTA />
       </main>
       <Footer />
-    </body>
+    </div>
   );
 };
 

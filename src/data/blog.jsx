@@ -17,7 +17,7 @@ const blogData = [
     writer: "Olushola Ogunkelu",
     writerDp: <img src={sholaPics} alt='writer image' className='w-[50px] h-[50px] rounded-full' />, 
     category: 'Relationship series',
-    content: '',
+    // content: '',
   },
   {
     slug: "Mentorship-system-with-David",
@@ -28,18 +28,18 @@ const blogData = [
     writer: "Omowunmi Esther",
     writerDp: <img src={wunmiPics} alt='writer image' className='w-[50px] h-[50px] rounded-full' />, 
     category: 'Mentorship',
-    content: '',
+    // content: '',
   },
   {
     slug: "Navigating-ATL-Marketplace",
     title: "Navigating The Online MarktetPlace: Insight From a New Vendor in ATL Marketplace.",
-    excerpt: "Imagine having a mentor who encourages onging education and adaptation to market trends.",
+    excerpt: "Navigating-ATL-Marketplace",
     image: <img src={marketimg} alt="#" className='w-full object-cover rounded-[10px] h-full' />,
     date: "7/02/2025",
     writer: "Tina Ozei",
     writerDp: <img src={tinaPics} alt='writer image' className='w-[50px] h-[50px] rounded-full' />, 
     category: 'E-commerce',
-    content: '',
+    // content: '',
   },
 ];
 

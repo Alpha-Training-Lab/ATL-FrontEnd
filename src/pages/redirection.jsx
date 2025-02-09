@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 const RedirectionPage = () => {
     return (
-        <body>
+        <div>
             {/* <Header /> */}
             <main className='w-full flex flex-col justify-center items-center py-[50px] gap-[30px]'>
                 <Link to='/'><img src={Logo} alt='ATL logo' className='w-[50px] h-[50px] md:w-[70px] md:h-[70px]'></img></Link>
@@ -48,7 +48,7 @@ const RedirectionPage = () => {
                 </div>
             </main>
             {/* <Footer /> */}
-        </body>
+        </div>
     );
 };
 
