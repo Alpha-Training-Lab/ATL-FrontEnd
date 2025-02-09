@@ -175,7 +175,7 @@ const KeyplayersPage = () => {
     // -----------------------------
     // page design starts here
     return (
-      <body className="flex flex-col w-full">
+      <div className="flex flex-col w-full">
         <Header isLoggedIn={isLoggedIn}/>
         <main>
             {/* Hero section or header  */}
@@ -208,7 +208,7 @@ const KeyplayersPage = () => {
             <CTA />
         </main>
         <Footer />
-      </body>  
+      </div>  
     );
 };
 

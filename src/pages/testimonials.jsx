@@ -15,7 +15,7 @@ const TestimonialsPage = () => {
   // ------------======================-----------
   // page starts here
   return (
-    <body>
+    <div>
         <Header />
         
         <main className='w-full flex flex-col justify-center items-center px-[15px] md:px-[30px] lg:px-[60px]'>
@@ -34,7 +34,7 @@ const TestimonialsPage = () => {
         </main>
 
         <Footer />
-    </body>
+    </div>
   );
 };
 
