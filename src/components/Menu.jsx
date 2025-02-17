@@ -30,9 +30,7 @@ const Menu = ({ isOpen, onClose, isLoggedIn }) => {
           <Link to='/maintenance' className='hover:text-white hover:pr-[20px]'>Reach out</Link>
           {/* Create Account button - only show if not logged in */}
           {!isLoggedIn && (
-            <SecondaryButton 
-              onClick={() => window.location.href ='/ICdirection'}
-              className="bg-white text-priText border-white hover:bg-white/10 w-full mt-[20px] md:hidden"
+            <SecondaryButton onClick={() => window.location.href ='/ICredirection'} className="bg-white text-priText border-white hover:bg-white/10 w-full mt-[20px] md:hidden"
             >
               Become a member
             </SecondaryButton>

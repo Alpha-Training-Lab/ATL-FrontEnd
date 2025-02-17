@@ -16,6 +16,7 @@ export default {
         DangerBg: '#F6D0D0',
         RedColor: '#A12222',
         greyColor:' #A0A0A0',
+        greyColorII: 'A5A5A5',
       },
       fontFamily: {
         figtree: ['Figtree', 'sans-serif'],
