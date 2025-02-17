@@ -1,7 +1,8 @@
-import lightlogo from '../assets/images/logos/lightlogo.png'
+import logo from '/Theme=light.png';
 import facebookIcon from '../assets/svgs/socials svg/social icons.svg'
 import InstagramIcon from '../assets/svgs/socials svg/gg_facebook-1.svg'
 import XIcon from '../assets/svgs/socials svg/gg_facebook.svg'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const socialLinks = [
@@ -23,11 +24,9 @@ const Footer = () => {
       <footer className="w-full bg-secondary text-white px-[15px] md:px-[30px] lg:px-[60px] pt-[100px] md:pt-[150px] pb-[10px]">
         <div className="flex flex-col items-center gap-[100px] md:gap-[50px]">
           <div className="flex flex-col items-center gap-[30px] text-center">
-            <img 
-              src={lightlogo} 
-              alt="Alpha training lab light logo" 
-              className="w-[75px] h-[75px] md:w-[40px] md:h-[40px]"
-            />
+            <Link onClick={() => window.location.href = '/'}>
+              <img src={logo} alt="Alpha training lab light logo" className="w-[100px] h-[55px]"/>
+            </Link>
             <p className="w-[90%] md:w-full md:px-5 lg:w-[70%]">
               Providing global, inclusive, and supportive online community that fosters personal and professional growth through 
               collaboration, engagement and innovation

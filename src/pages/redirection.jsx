@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // import Footer from '../components/common/footer';
 // import { useAuth } from '../context/AuthContext';
 // import Logo from '../../public/darklogo.png';
-import Logo from '/darklogo.png';
+import logo from '/Theme=dark.png';
 import warningIcon from '../assets/svgs/SealWarning.svg';
 import { PrimaryButton, SecondaryButton } from '../components/Buttons';
 import { Link } from 'react-router-dom';
@@ -14,8 +14,10 @@ const RedirectionPage = () => {
     return (
         <div>
             {/* <Header /> */}
-            <main className='w-full flex flex-col justify-center items-center py-[50px] gap-[30px]'>
-                <Link to='/'><img src={Logo} alt='ATL logo' className='w-[50px] h-[50px] md:w-[70px] md:h-[70px]'></img></Link>
+            <main className='w-full flex flex-col justify-center items-center py-[50px] gap-[10px]'>
+                <Link onClick={() => window.location.href = '/'}>
+                    <img src={logo} alt='ATL logo' className='w-[100px] h-[80px] md:w-[120px] md:h-[100px] object-contain'></img>
+                </Link>
                 <div className='flex flex-col gap-[50px] items-center border  rounded-[20px] m-[20px] p-[20px] py-[50px] md:mx-[10%] lg:mx-[20%] lg:px-[50px] '>
                     <div className='flex flex-col gap-[5px] '>
                         <h3 className='text-[32px] text-center leading-tight md:text-[40px]'>You are One Step Closer</h3>
@@ -39,11 +41,11 @@ const RedirectionPage = () => {
                             <PrimaryButton onClick={() => window.open("https://t.me/+e6Cswk2fgUIzNjk0", "_blank")}  rel='noopener noreferrer'>
                                 Join the session
                             </PrimaryButton>
-                            <SecondaryButton>
+                            <SecondaryButton onClick={() => window.location.href = '/ICredirection/SubmitKYC'}>
                                 Submit your KYC
                             </SecondaryButton>
                         </div>
-                        <p>Already a member? <Link className='text-primary hover:underline'>Log In</Link></p>
+                        <p>Already a member? <Link className='text-primary hover:underline' onClick={() => window.location.href = '/login'}>Log In</Link></p>
                     </div>
                 </div>
             </main>

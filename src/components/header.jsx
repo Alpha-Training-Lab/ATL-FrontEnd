@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PrimaryButton, SecondaryButton } from './Buttons';
 import Menu from './Menu';
-import logo from '../assets/images/logos/darklogo.png';
+import logo from '/Theme=dark.png';
 
 
 // Imports ends here
@@ -17,14 +17,11 @@ const Header = ({ isLoggedIn }) => {
   return (
     <header className="fixed top-0 left-0 flex justify-between items-center w-full px-[15px] md:px-[30px] lg:px-[60px] py-[10px] border-b border-solid bg-white">
       {/* Logo section */}
-      <div className="w-[50px] h-[50px] flex items-center justify-center">
-        <img 
-          src={logo} 
-          alt='Alpha training lab logo' 
-          className="w-full h-full object-contain"
-        />
-      </div>
-
+      <Link onClick={() => window.location.href = '/'}>
+        <div className="flex items-center justify-center p-[5px]">
+          <img src={logo} alt='Alpha training lab logo' className="w-[70px] h-[40px] md:w-[80px] md:h-[50px] object-contain" />
+        </div>
+      </Link>
       {/* Navigation and buttons */}
       <div className="flex items-center gap-[2px] md:gap-[20px]">
         {/* Desktop navigation */}
@@ -40,11 +37,8 @@ const Header = ({ isLoggedIn }) => {
         {/* Auth Buttons - only show if not logged in */}
         {!isLoggedIn && (
           <div className="flex items-center">
-            <SecondaryButton 
-              onClick={() => window.location.href = '/login'}
-              className="border-0 hover:border hover:border-solid hover:border-grey-900"
-            >
-              <Link to='/maintenance'>Log In</Link>
+            <SecondaryButton onClick={() => window.location.href = '/login'} className="border-0 hover:border hover:border-solid hover:border-grey-900">
+              Log In
             </SecondaryButton>
             <div className="hidden md:block">
               <PrimaryButton onClick={() => window.location.href = '/ICredirection'}>
