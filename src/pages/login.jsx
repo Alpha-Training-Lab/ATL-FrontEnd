@@ -1,5 +1,5 @@
 import logo from '/Theme=dark.png';
-import { PrimaryButton, LinkButton } from '../components/buttons'
+import { PrimaryButton, LinkButton } from '../components/buttons';
 import { Link } from 'react-router-dom';
 
 
