@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { SecondaryButton } from './Buttons';
+import { SecondaryButton } from './buttons';
 
 
 // Imports ends here
