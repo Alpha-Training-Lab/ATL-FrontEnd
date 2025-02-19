@@ -1,4 +1,4 @@
-import { PrimaryButton } from "./Buttons";
+import { PrimaryButton } from "./buttons";
 
 const CTA = () => {
   return (

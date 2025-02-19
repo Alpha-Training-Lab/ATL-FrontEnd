@@ -1,23 +1,16 @@
-import React, { Component } from 'react';
-// import Header from '../components/common/header';
-// import CTA from '../components/common/cta';
-// import Footer from '../components/common/footer';
-// import { useAuth } from '../context/AuthContext';
-// import Logo from '../../public/darklogo.png';
 import logo from '/Theme=dark.png';
 import warningIcon from '../assets/svgs/SealWarning.svg';
-import { PrimaryButton, SecondaryButton } from '../components/Buttons';
-import { Link } from 'react-router-dom';
+import { PrimaryButton, SecondaryButton, LinkButton } from '../components/buttons';
+// import { Link } from 'react-router-dom';
 
 
 const RedirectionPage = () => {
     return (
         <div>
-            {/* <Header /> */}
             <main className='w-full flex flex-col justify-center items-center py-[50px] gap-[10px]'>
-                <Link onClick={() => window.location.href = '/'}>
+                <LinkButton to= '/'>
                     <img src={logo} alt='ATL logo' className='w-[100px] h-[80px] md:w-[120px] md:h-[100px] object-contain'></img>
-                </Link>
+                </LinkButton>
                 <div className='flex flex-col gap-[50px] items-center border  rounded-[20px] m-[20px] p-[20px] py-[50px] md:mx-[10%] lg:mx-[20%] lg:px-[50px] '>
                     <div className='flex flex-col gap-[5px] '>
                         <h3 className='text-[32px] text-center leading-tight md:text-[40px]'>You are One Step Closer</h3>
@@ -45,11 +38,10 @@ const RedirectionPage = () => {
                                 Submit your KYC
                             </SecondaryButton>
                         </div>
-                        <p>Already a member? <Link className='text-primary hover:underline' onClick={() => window.location.href = '/login'}>Log In</Link></p>
+                        <p className='text-[14px]'>Already a member? <LinkButton to='/login'>Log in</LinkButton></p>
                     </div>
                 </div>
             </main>
-            {/* <Footer /> */}
         </div>
     );
 };

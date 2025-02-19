@@ -2,7 +2,9 @@ import logo from '/Theme=light.png';
 import facebookIcon from '../assets/svgs/socials svg/social icons.svg'
 import InstagramIcon from '../assets/svgs/socials svg/gg_facebook-1.svg'
 import XIcon from '../assets/svgs/socials svg/gg_facebook.svg'
-import { Link } from 'react-router-dom';
+import { LinkButton } from './buttons';
+
+
 
 const Footer = () => {
     const socialLinks = [
@@ -24,9 +26,9 @@ const Footer = () => {
       <footer className="w-full bg-secondary text-white px-[15px] md:px-[30px] lg:px-[60px] pt-[100px] md:pt-[150px] pb-[10px]">
         <div className="flex flex-col items-center gap-[100px] md:gap-[50px]">
           <div className="flex flex-col items-center gap-[30px] text-center">
-            <Link onClick={() => window.location.href = '/'}>
+            <LinkButton to= '/'>
               <img src={logo} alt="Alpha training lab light logo" className="w-[100px] h-[55px]"/>
-            </Link>
+            </LinkButton>
             <p className="w-[90%] md:w-full md:px-5 lg:w-[70%]">
               Providing global, inclusive, and supportive online community that fosters personal and professional growth through 
               collaboration, engagement and innovation
@@ -46,8 +48,8 @@ const Footer = () => {
               Copyright © 2021 - Present. <br className='md:hidden'/> ATL-All rights reserved.
             </p>
             <div className="flex flex-col gap-[5px] md:flex-row md:gap-[10px]">
-              <a href="#" className="underline text-sm text-bgColor md:text-xs">Terms of Service</a>
-              <a href="#" className="underline text-sm text-bgColor md:text-xs">Terms of Use</a>
+              <LinkButton to='/terms-and-conditions' className='text-[14px] text-white underline'>Terms and conditions</LinkButton>
+              <LinkButton to='/privacy-policy' className="text-[14px] text-white underline">Privacy policy</LinkButton>
             </div>
           </div>
         </div>

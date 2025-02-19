@@ -18,7 +18,7 @@ const KYCStepOne = ({ formData, setFormData, nextStep }) => {
             <div className="w-full flex flex-col gap-[5px]">
                 <div className="flex justify-between items-end">
                   <label htmlFor="bamcode" className="text-[15px] pl-[10px]">Bam code</label>
-                  <LinkButton className="text-[12px]">
+                  <LinkButton to='/ICredirection' className="text-[12px]">
                     I don't have a Bamcode
                   </LinkButton>
                 </div>
@@ -27,7 +27,7 @@ const KYCStepOne = ({ formData, setFormData, nextStep }) => {
         </form>
         <div className="w-full flex gap-[5px] items-start">
           <input type="checkbox" className="mt-[4px] bg-greyColor border border-greyColor rounded-[5px]"/>
-          <p className="text-[12px] leading-tight">Clicking on 'create an account' means you have read and accepted alpha training lab <LinkButton>Terms of use</LinkButton> and <LinkButton>Terms of service</LinkButton>. Proceeding also means you have read and understood Alpha Training lab <LinkButton>Privacy Policy</LinkButton></p>
+          <p className="text-[12px] leading-tight">I agree that i have read, understood and accept Alpha Training Lab's <LinkButton to='/terms-and-conditions'>Terms and conditions</LinkButton>. I also also understand that creating an account means that i consent to Alpha Training Lab's <LinkButton to='/privacy-policy'>Privacy policy</LinkButton>.</p>
         </div>
         <div className="flex flex-col items-center gap-[5px] w-full">
           <PrimaryButton onClick={nextStep} className="mt-[20px] w-full">

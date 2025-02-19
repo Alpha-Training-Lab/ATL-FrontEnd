@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PrimaryButton, SecondaryButton } from './Buttons';
+import { PrimaryButton, SecondaryButton } from './buttons';
 import Menu from './Menu';
 import logo from '/Theme=dark.png';
 
