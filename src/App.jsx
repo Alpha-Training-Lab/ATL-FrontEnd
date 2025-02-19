@@ -10,7 +10,13 @@ import BlogPage from './pages/blog';
 import BlogPost from './pages/blogpost';
 import KYCRegistration from './pages/KYCRegistration';
 import LoginPage from './pages/login';
+import TermsAndConditions from './pages/t&C';
+import PrivacyPolicy from './pages/privacy';
 
+
+
+// ------------------=====================---------------
+// App routing starts here
 function App() {
   return (
     // <Router>
@@ -35,6 +41,8 @@ function App() {
         <Route path='/Key players' element={<KeyplayersPage />} />
         <Route path='/blog' element={<BlogPage />} /> 
         <Route path='/blog/:slug' element={<BlogPost />} />
+        <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/ICredirection' element={<RedirectionPage />} />
         <Route path='/ICredirection/SubmitKYC' element={<KYCRegistration />} />
         <Route path='/login' element={<LoginPage />} />

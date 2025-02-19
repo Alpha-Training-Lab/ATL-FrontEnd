@@ -1,6 +1,5 @@
 import logo from '/Theme=dark.png';
 import { PrimaryButton, LinkButton } from '../components/buttons';
-import { Link } from 'react-router-dom';
 
 
 const LoginPage = () => {
@@ -14,7 +13,6 @@ const LoginPage = () => {
                             <div className='flex flex-col gap-[5px]'>
                                 <label htmlFor='email' className='text-[14px] text-bold pl-[15px]'>Email address</label>
                                 <input type="text" id="email" name="email" placeholder="Enter your email address" className="p-[10px] pl-[15px] border border-greyColor bg-inherit rounded-[100px]"/>
-                                {/* <input type='text' for/> */}
                             </div>
                             <div className='flex flex-col gap-[5px]'>
                                 <label htmlFor='password' className='text-[14px] text-bold pl-[15px]'>Password</label>
@@ -35,23 +33,6 @@ const LoginPage = () => {
                         </div>
                     </div>
                 </form>
-                {/* <div className='flex flex-col items-center gap-[10px] p-[20px] border border-greyColor rounded-[10px]'>
-                    <p>Or</p>
-                    <div className='flex flex-col w-full gap-[5px]'>
-                        <div className='flex p-[5px] w-[100%] bg-greyColor rounded-[100px] justify-center'>
-                            <img className='#'></img>
-                            login with google
-                        </div>
-                        <div className='flex p-[5px] w-[100%] bg-greyColor rounded-[100px] justify-center'>
-                            <img className='#'></img>
-                            login with facebook
-                        </div>
-                        <div className='flex p-[5px] w-[100%] bg-greyColor rounded-[100px] justify-center'>
-                            <img className='#'></img>
-                            login with ssh
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </main>
     );
