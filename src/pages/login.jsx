@@ -1,15 +1,15 @@
 import logo from '/Theme=dark.png';
-import { PrimaryButton } from '../components/Buttons'
+import { PrimaryButton, LinkButton } from '../components/buttons'
 import { Link } from 'react-router-dom';
 
 
 const LoginPage = () => {
     return (
-        <main className='flex flex-col justify-center items-center min-h-screen p-[50px] gap-[30px]'>
-            <img src={logo} alt='atl logo' className='w-[100px] h-[80px] md:w-[120px] md:h-[100px] object-contain'  onClick={() => window.location.href = '/'}/> 
-            <div className='flex flex-col gap-[20px] w-[550px] rounded-[20px]'>
+        <main className='w-full flex flex-col justify-start items-center min-h-screen p-[20px] gap-[30px] md:p-[30px] lg:p-[60px]  '>
+            <img src={logo} alt='atl logo' className='w-[100px] h-[80px] object-contain md:w-[120px] md:mt-[5%] lg:mt-[0%]' onClick={() => window.location.href = '/'}/> 
+            <div className='w-[100%] flex flex-col gap-[20px] rounded-[20px] md:w-[80%] lg:w-[45%]'>
                 <form className='w-full flex flex-col gap-[40px] p-[20px] border border-greyColor rounded-[20px]'>
-                    <div className='flex flex-col gap-[5px]'>
+                    <div className='flex flex-col gap-[10px]'>
                         <div className='flex flex-col gap-[20px]'>
                             <div className='flex flex-col gap-[5px]'>
                                 <label htmlFor='email' className='text-[14px] text-bold pl-[15px]'>Email address</label>
@@ -21,15 +21,17 @@ const LoginPage = () => {
                                 <input type='password' id='password' name='password' className='p-[10px] px-[20px] border border-greyColor bg-inherit rounded-[100px]' />
                             </div>
                         </div>
-                        <Link className='text-primary hover:underline w-full text-[14px] text-right pr-[10px]'>
+                        <LinkButton className='w-full text-right pr-[10px] lg:text-[14px]'>
                             Reset password
-                        </Link>
+                        </LinkButton>
                     </div>
-                    <div className='w-[100%] flex flex-col justify-center items-center gap-[10px]'>
+                    <div className='w-[100%] flex flex-col justify-center items-center gap-[15px]'>
                         <PrimaryButton className='w-full'>Log in</PrimaryButton>
-                        <div className='flex gap-[5px] items-center'>
+                        <div className='flex gap-[5px] items-center lg:text-[14px]'>
                             Not a member?
-                            <Link onClick={() => window.location.href = '/ICredirection/SubmitKYC'} className='text-[14px] text-primary hover:text-greyColor hover:underline'>Click here</Link> 
+                            <LinkButton to='/ICredirection/SubmitKYC'>
+                                Click here
+                            </LinkButton>
                         </div>
                     </div>
                 </form>
