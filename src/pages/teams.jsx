@@ -3,7 +3,7 @@ import Header from '../components/header';
 import CTA from '../components/cta';
 import Footer from '../components/footer';
 import { useAuth } from '../context/AuthContext';
-import { PrimaryButton } from '../components/Buttons';
+import { PrimaryButton } from '../components/buttons';
 
 // importing images
 import Prof from '../assets/images/Keyplayerspg/PROF.jpg';
