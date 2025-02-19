@@ -28,7 +28,8 @@ const KYCRegistration = () => {
         profession: "",
         telegram: "",
         referral: "",
-        vouch: "",
+        vouchname: "",
+        vouchusername: "",
         idSelection: "",
         document: null,
     });
@@ -45,13 +46,10 @@ const KYCRegistration = () => {
 //   -------------===================-------------
 // page design starts here
   return (
-    <main className='flex flex-col justify-center items-center min-h-screen p-[50px] gap-[px]'>
+    <main className='w-full flex flex-col justify-start items-center min-h-screen px-[15px] py-[50px] gap-[10px] md:gap-[50px] md:px-[30px] lg:p-[60px] lg:gap-[10px]'>
         <img src={logo} alt='ATL logo' className='w-[100px] h-[80px] md:w-[120px] md:h-[100px] object-contain'  onClick={() => window.location.href = '/'}/>
-        {/* <div>
-          {stepTitles[step - 1]}
-        </div> */}
         <StepIndicator step={step} />
-        <div className="flex flex-col items-center p-8 w-full max-w-2xl">
+        <div className="flex flex-col justify-center items-center w-full max-w-2xl md:w-[80%] lg:w-[full]">
           {step === 1 && <KYCStepOne formData={formData} setFormData={setFormData} nextStep={() => setStep(2)} />}
           {step === 2 && <KYCStepTwo formData={formData} setFormData={setFormData} nextStep={() => setStep(3)} prevStep={() => setStep(1)} />}
           {step === 3 && <KYCStepThree formData={formData} setFormData={setFormData} nextStep={() => setStep(4)} prevStep={() => setStep(2)} />}

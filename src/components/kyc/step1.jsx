@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { PrimaryButton } from "../Buttons";
+import { PrimaryButton, LinkButton } from "../buttons";
 
 
 const KYCStepOne = ({ formData, setFormData, nextStep }) => {
@@ -18,14 +18,16 @@ const KYCStepOne = ({ formData, setFormData, nextStep }) => {
             <div className="w-full flex flex-col gap-[5px]">
                 <div className="flex justify-between items-end">
                   <label htmlFor="bamcode" className="text-[15px] pl-[10px]">Bam code</label>
-                  <Link className="text-primary text-[12px] hover:text-greyColor hover:underline">I don't have a bamcode</Link>
+                  <LinkButton className="text-[12px]">
+                    I don't have a Bamcode
+                  </LinkButton>
                 </div>
                 <input type="text" id="BAM" name="bamcode" placeholder="Enter your Bam Code" className="w-full p-[10px] bg-inherit text-[12px] border border-greyColor rounded-[100px]"/>
             </div>
         </form>
         <div className="w-full flex gap-[5px] items-start">
           <input type="checkbox" className="mt-[4px] bg-greyColor border border-greyColor rounded-[5px]"/>
-          <p className="text-[12px] leading-tight">Clicking on 'create an account' means you have read and accepted alpha training lab <Link className="text-primary hover:text-greyColor hover:underline">Terms of use</Link> and <Link className="text-primary hover:text-greyColor hover:underline">Terms of service</Link>. Proceeding also means you have read and understood Alpha Training lab <Link className="text-primary hover:text-greyColor hover:underline">Privacy Policy</Link></p>
+          <p className="text-[12px] leading-tight">Clicking on 'create an account' means you have read and accepted alpha training lab <LinkButton>Terms of use</LinkButton> and <LinkButton>Terms of service</LinkButton>. Proceeding also means you have read and understood Alpha Training lab <LinkButton>Privacy Policy</LinkButton></p>
         </div>
         <div className="flex flex-col items-center gap-[5px] w-full">
           <PrimaryButton onClick={nextStep} className="mt-[20px] w-full">
@@ -33,7 +35,9 @@ const KYCStepOne = ({ formData, setFormData, nextStep }) => {
           </PrimaryButton>
           <div className="flex gap-[5px] text-[14px]">
             <p>Already a member?</p>
-            <Link onClick={() => window.location.href = '/login'} className="text-primary hover:text-greyColor hover:underline">Log in</Link>
+            <LinkButton to='/login'>
+              Log in
+            </LinkButton>
           </div>
         </div>
       </div>

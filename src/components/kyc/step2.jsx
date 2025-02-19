@@ -1,11 +1,11 @@
-import { PrimaryButton, SecondaryButton } from "../Buttons";
+import { PrimaryButton, SecondaryButton } from "../buttons";
 
 
 const KYCStepTwo = ({ formData, setFormData, nextStep, prevStep }) => {
     return (
-      <div className="flex flex-col justify-center items-center gap-[50px] p-[20px] pt-[40px] w-[1000px] border border-greyColor rounded-[20px]">
+      <div className="w-full flex flex-col justify-center items-center gap-[50px] p-[20px] py-[40px] border border-greyColor rounded-[20px] lg:gap-[100px] lg:w-[1100px]">
         {/* <h2 className="text-xl font-bold">Step 2: Basic Information</h2> */}
-        <form className="grid grid-cols-2 gap-[20px] w-full">
+        <form className="flex flex-col lg:grid lg:grid-cols-3 gap-[20px] w-full">
             <div className="w-full flex flex-col gap-[5px]">
                 <label htmlFor="firstname" className="text-[15px] pl-[10px]">First Name</label>
                 <input type="text" id="firstname" name="password" placeholder="Enter your first name" className="w-full p-[10px] bg-inherit text-[12px] border border-greyColor rounded-[100px]"/>
@@ -40,7 +40,7 @@ const KYCStepTwo = ({ formData, setFormData, nextStep, prevStep }) => {
                 <input type="text" id="country" name="country" placeholder="Which country do you currently reside?" className="w-full p-[10px] bg-inherit text-[12px] border border-greyColor rounded-[100px]"/>
             </div>
             <div className="w-full flex flex-col gap-[5px]">
-                <label htmlFor="state" className="text-[15px] pl-[10px]">What State?</label>
+                <label htmlFor="state" className="text-[15px] pl-[10px]">What state?</label>
                 <input type="text" id="state" name="state" placeholder="state" className="w-full p-[10px] bg-inherit text-[12px] border border-greyColor rounded-[100px]"/>
             </div>
             <div className="w-full flex flex-col gap-[5px]">
@@ -94,11 +94,11 @@ const KYCStepTwo = ({ formData, setFormData, nextStep, prevStep }) => {
                 <input type="text" id="profession" name="profession" placeholder="Kindly enter the university or institution you graduated" className="w-full p-[10px] bg-inherit text-[12px] border border-greyColor rounded-[100px]"/>
             </div>
         </form>
-        <div className="flex justify-between w-full">
-          <SecondaryButton onClick={prevStep} className="w-[250px]">
+        <div className="flex flex-col-reverse justify-between w-full gap-[10px] lg:flex-row">
+          <SecondaryButton onClick={prevStep} className="w-full lg:w-[350px]">
             Back
           </SecondaryButton>
-          <PrimaryButton onClick={nextStep} className="w-[250px]">
+          <PrimaryButton onClick={nextStep} className="w-full lg:w-[350px]">
             Next
           </PrimaryButton>
         </div>

@@ -1,12 +1,10 @@
-import { PrimaryButton, SecondaryButton } from "../Buttons";
+import { LinkButton, PrimaryButton, SecondaryButton } from "../buttons";
 
 
 const KYCStepThree = ({ formData, setFormData, nextStep, prevStep }) => {
     return (
-      <div>
-        {/* <h2 className="text-xl font-bold">Step 3: Referral and Upload Documents</h2> */}
-        <div className="flex flex-col justify-center items-center gap-[50px] p-[20px] pt-[40px] w-[1000px] border border-greyColor rounded-[20px]">
-            <form className="grid grid-cols-2 gap-[20px] w-full">
+        <div className="w-full flex flex-col justify-center items-center gap-[50px] p-[20px] pt-[40px] border border-greyColor rounded-[20px] lg:w-[1000px]">
+            <form className="flex flex-col lg:grid lg:grid-cols-2 gap-[20px] w-full">
                 <div className="w-full flex flex-col gap-[5px]">
                     <label htmlFor='telegram' className="text-[15px] pl-[10px]">Your telegram username</label>
                     <input type="text" id="telegram" name="telegram" placeholder="Enter your telegram's username" className="w-full p-[10px] bg-inherit text-[12px] border border-greyColor rounded-[100px]"/>
@@ -41,8 +39,12 @@ const KYCStepThree = ({ formData, setFormData, nextStep, prevStep }) => {
                     </div>
                 </div>
                 <div className="w-full flex flex-col gap-[5px]">
-                    <label htmlFor='vouch' className="text-[15px] pl-[10px]">Who is your Vouch?</label>
-                    <input type="text" id="vouch" name="vouch" placeholder="Enter your vouch's telegram username" className="w-full p-[10px] bg-inherit text-[12px] border border-greyColor rounded-[100px]"/>
+                    <label htmlFor="vouchname" className="text-[15px] pl-[10px]">Vouch Full name</label>
+                    <input type='text' id="vouchname" name="vouchname" placeholder="Enter the full name of the person who invited you" className="w-full p-[10px] bg-inherit text-[12px] border border-greyColor rounded-[100px]" />
+                </div>
+                <div className="w-full flex flex-col gap-[5px]">
+                    <label htmlFor='vouchusername' className="text-[15px] pl-[10px]">Vouch telegram username?</label>
+                    <input type="text" id="vouchusername" name="vouchusername" placeholder="Enter your vouch's telegram username" className="w-full p-[10px] bg-inherit text-[12px] border border-greyColor rounded-[100px]"/>
                 </div>
                 <div className="w-full flex flex-col gap-[5px]">
                     <label htmlFor='idSelection' className="text-[15px] pl-[10px]">Which ID you have?</label>
@@ -61,16 +63,21 @@ const KYCStepThree = ({ formData, setFormData, nextStep, prevStep }) => {
                     <input type="file" className="w-full p-[10px] bg-inherit text-[12px]"/>
                 </div>
             </form>
-            <div className="flex justify-between w-full">
-              <SecondaryButton onClick={prevStep} className="w-[250px]">
-                Back
-              </SecondaryButton>
-              <PrimaryButton onClick={nextStep} className="w-[250px]">
-                Submit
-              </PrimaryButton>
+            <div className="w-full flex flex-col gap-[20px] ">
+                <div className="w-full flex gap-[5px] items-center">
+                  <input type="checkbox" className="mt-[2px] bg-greyColor border border-greyColor rounded-[5px]"/>
+                  <p className="text-[12px] leading-tight">Submitting your kyc means you have read, understoood and agree with <LinkButton>Privacy Policy</LinkButton> and <LinkButton>Terms of service.</LinkButton></p>
+                </div>
+                <div className="flex flex-col-reverse gap-[10px] justify-between w-full lg:flex-row">
+                  <SecondaryButton onClick={prevStep} className="w-[full] lg:w-[350px]">
+                    Back
+                  </SecondaryButton>
+                  <PrimaryButton onClick={nextStep} className="w-[full] lg:w-[350px]">
+                    Submit
+                  </PrimaryButton>
+                </div>
             </div>
         </div>
-      </div>
     );
   };
   

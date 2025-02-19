@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 const PrimaryButton = ({ children, onClick, className = '', type = 'button', disabled = false }) => {
   return (
     <button
@@ -24,4 +27,15 @@ const SecondaryButton = ({ children, onClick, className = '', type = 'button', d
   );
 };
 
-export { PrimaryButton, SecondaryButton }; 
+const LinkButton = ({ children, to , className = ''}) => {
+  return (
+    <Link
+      to={to}
+      className={`text-14px text-primary hover:text-greyColor hover:underline ${className}`}
+    >
+      {children}
+    </Link>
+  )
+}
+
+export { PrimaryButton, SecondaryButton, LinkButton }; 
