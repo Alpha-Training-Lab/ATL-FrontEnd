@@ -1,7 +1,6 @@
 import logo from '/Theme=dark.png';
 import warningIcon from '../assets/svgs/SealWarning.svg';
-import { PrimaryButton, SecondaryButton, LinkButton } from '../components/buttons';
-// import { Link } from 'react-router-dom';
+import { PrimaryButton, SecondaryButton, LinkButton } from '../components/buttons.jsx';
 
 
 const RedirectionPage = () => {
@@ -31,7 +30,7 @@ const RedirectionPage = () => {
                     </div>
                     <div className='flex flex-col gap-[10px] items-center md:gap-[20px]'> 
                         <div className='flex flex-col gap-[10px] md:flex-row'>
-                            <PrimaryButton onClick={() => window.open("https://t.me/+e6Cswk2fgUIzNjk0", "_blank")}  rel='noopener noreferrer'>
+                            <PrimaryButton onClick={() => window.open("https://t.me/+bJOGpEVSlQ8zMzY0", "_blank")}  rel='noopener noreferrer'>
                                 Join the session
                             </PrimaryButton>
                             <SecondaryButton onClick={() => window.location.href = '/ICredirection/SubmitKYC'}>

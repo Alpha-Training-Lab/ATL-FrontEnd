@@ -36,6 +36,6 @@ const LinkButton = ({ children, to , className = ''}) => {
       {children}
     </Link>
   )
-}
+};
 
 export { PrimaryButton, SecondaryButton, LinkButton }; 
