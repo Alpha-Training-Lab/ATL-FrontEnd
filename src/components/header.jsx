@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PrimaryButton, SecondaryButton } from './buttons';
+import { PrimaryButton } from './buttons';
 import Menu from './Menu';
 import logo from '/Theme=dark.png';
 
 
 // Imports ends here
 // ------------=======================-----------
-const Header = ({ isLoggedIn }) => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const toggleMenu = () => {
@@ -34,19 +34,11 @@ const Header = ({ isLoggedIn }) => {
           <Link to='/maintenance' className='hover:text-primary'>Reach out</Link>
         </nav>
 
-        {/* Auth Buttons - only show if not logged in */}
-        {!isLoggedIn && (
-          <div className="flex items-center">
-            <SecondaryButton onClick={() => window.location.href = '/login'} className="border-0 hover:border hover:border-solid hover:border-grey-900">
-              Log In
-            </SecondaryButton>
-            <div className="hidden md:block">
-              <PrimaryButton onClick={() => window.location.href = '/ICredirection'}>
-                Become a member
-              </PrimaryButton>
-            </div>
-          </div>
-        )}
+        <div className="hidden md:block">
+          <PrimaryButton onClick={() => window.location.href = '/ICredirection'}>
+            Become a member
+          </PrimaryButton>
+        </div>
 
         {/* Hamburger Menu for Mobile */}
         <div className="menuicon flex flex-col justify-between h-6 w-8 lg:hidden p-[2px]" onClick={toggleMenu}>
@@ -57,7 +49,7 @@ const Header = ({ isLoggedIn }) => {
       </div>
 
       {/* Mobile Menu */}
-      <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} isLoggedIn={isLoggedIn} />
+      <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </header>
   );
 };

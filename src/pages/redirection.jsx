@@ -1,6 +1,8 @@
 import logo from '/Theme=dark.png';
 import warningIcon from '../assets/svgs/SealWarning.svg';
-import { PrimaryButton, SecondaryButton, LinkButton } from '../components/buttons.jsx';
+import { PrimaryButton, LinkButton } from '../components/buttons.jsx';
+
+const TELEGRAM_INDUCTION_URL = 'https://t.me/+e6Cswk2fgUIzNjk0';
 
 
 const RedirectionPage = () => {
@@ -28,16 +30,10 @@ const RedirectionPage = () => {
                         <img src={warningIcon} alt='icon' className='w-[25px] h-[25px]'></img>
                         <p className='md:text-[15px]'>Kindly note that; Admins bear the right to decline your summary if it is unacceptable and you will be givien a BAM code. No BAM Code, No KYC. NO KYC, No Approval</p>
                     </div>
-                    <div className='flex flex-col gap-[10px] items-center md:gap-[20px]'> 
-                        <div className='flex flex-col gap-[10px] md:flex-row'>
-                            <PrimaryButton onClick={() => window.open("https://t.me/+bJOGpEVSlQ8zMzY0", "_blank")}  rel='noopener noreferrer'>
-                                Join the session
-                            </PrimaryButton>
-                            <SecondaryButton onClick={() => window.location.href = '/ICredirection/SubmitKYC'}>
-                                Submit your KYC
-                            </SecondaryButton>
-                        </div>
-                        <p className='text-[14px]'>Already a member? <LinkButton to='/login'>Log in</LinkButton></p>
+                    <div className='flex flex-col gap-[10px] items-center md:gap-[20px]'>
+                        <PrimaryButton onClick={() => window.open(TELEGRAM_INDUCTION_URL, "_blank")} rel='noopener noreferrer'>
+                            Join the session
+                        </PrimaryButton>
                     </div>
                 </div>
             </main>

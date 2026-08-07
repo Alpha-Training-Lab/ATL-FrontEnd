@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from '../components/header';
 import CTA from '../components/cta';
 import Footer from '../components/footer';
-import { useAuth } from '../context/AuthContext';
 import { PrimaryButton } from '../components/buttons';
 
 // importing images
@@ -24,8 +23,6 @@ import imposter from '../assets/images/Keyplayerspg/Sam.jpg';
 // Imports ends here
 // ----------=============================-------------
 const KeyplayersPage = () => {
-    const { isLoggedIn } = useAuth();
-
     // leaders cards Component
     const leaders = [
         {
@@ -176,7 +173,7 @@ const KeyplayersPage = () => {
     // page design starts here
     return (
       <div className="flex flex-col w-full">
-        <Header isLoggedIn={isLoggedIn}/>
+        <Header />
         <main>
             {/* Hero section or header  */}
             <section className='flex flex-col px-[15px] py-[100px] items-center gap-[30px] md:px-[30px] md:pt-[150px] lg:px-[60px] '>
