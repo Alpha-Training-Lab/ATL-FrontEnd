@@ -47,7 +47,7 @@ const MaintenancePage = () => {
                         </a>
                       ))}
                     </div>
-                    <p className="text-[12px] underline">support@alphatraininglab.net</p>
+                    <p className="text-[12px] underline">support@alphatraininglab.org</p>
                 </div>
             </main>
         </body>
