@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from '../components/header';
 import CTA from '../components/cta';
 import Footer from '../components/footer';
-import { useAuth } from '../context/AuthContext';
 import GrowthIcon from '../assets/svgs/aboutpgsvgs/ic2.svg';
 import TransformationIcon from '../assets/svgs/aboutpgsvgs/ic1.svg';
 import LearnIcon from '../assets/svgs/aboutpgsvgs/ic3.svg';
@@ -28,8 +27,6 @@ import { useRef } from 'react';
 // Imports ends here
 // ----------=============================-------------
 const AboutPage = () => {
-  const { isLoggedIn } = useAuth();
-
   // values component
   const values = [
     {
@@ -59,7 +56,7 @@ const AboutPage = () => {
   // page design starts here
   return (
     <div className='flex flex-col w-full'>
-      <Header isLoggedIn={isLoggedIn}/>
+      <Header />
       <main className='flex flex-col justify-between gap-[0px] items-center'>        
         {/* Hero section */}
         <section className='flex flex-col px-[15px] py-[100px] gap-[50px] md:flex-row md:px-[30px] md:py-[150px] lg:px-[60px] lg:items-center '>

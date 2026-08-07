@@ -6,8 +6,7 @@ import testimonialData from '../data/testimonials';
 import BlogCard from '../components/blog';
 import blogData from '../data/blog';
 import Footer from '../components/footer';
-import { useAuth } from '../context/AuthContext';
-import heroImage from '../assets/images/homeimgs/heromobile.jpg'; 
+import heroImage from '../assets/images/homeimgs/heromobile.jpg';
 import heroImageDesktop from '../assets/images/homeimgs/heroimg.jpg'; 
 import { PrimaryButton } from '../components/buttons';
 import { SecondaryButton } from '../components/buttons';
@@ -20,7 +19,6 @@ import Icon3 from '../assets/icon/lock.png';
 
 
 const HomePage = () => {
-  const { isLoggedIn } = useAuth();
   const [currentImage, setCurrentImage] = useState(heroImage);
   const [shuffledTestimonials, setShuffledTestimonials] = useState([]);
   const [featuredBlogs, setFeaturedBlogs] = useState([]);
@@ -102,7 +100,7 @@ const HomePage = () => {
 // design starts here
   return (
     <div>
-      <Header isLoggedIn={isLoggedIn} />
+      <Header />
       <main className="flex flex-col w-full">
         {/* Hero section */}
         <section className="w-full px-[15px] md:px-[30px] lg:px-[60px] py-[50px]">
