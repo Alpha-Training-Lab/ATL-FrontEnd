@@ -22,7 +22,7 @@ const Header = () => {
     isActive(path) ? 'text-primary font-semibold' : 'hover:text-primary';
 
   return (
-    <header className="fixed top-0 left-0 flex justify-between items-center w-full px-[15px] md:px-[30px] lg:px-[60px] py-[10px] border-b border-solid bg-white">
+    <header className="fixed top-0 left-0 z-50 flex justify-between items-center w-full px-[15px] md:px-[30px] lg:px-[60px] py-[10px] border-b border-solid bg-white">
       {/* Logo section */}
       <Link onClick={() => window.location.href = '/'}>
         <div className="flex items-center justify-center p-[5px]">
