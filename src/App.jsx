@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
 import KeyplayersPage from './pages/teams';
-import MaintenancePage from './pages/maintainance';
 import RedirectionPage from './pages/redirection';
 import TestimonialsPage from './pages/testimonials';
 import BlogPage from './pages/blog';
@@ -25,7 +24,6 @@ function App() {
         <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/ICredirection' element={<RedirectionPage />} />
-        <Route path='/Maintenance' element={<MaintenancePage />} />
       </Routes>
     </div>
   );
