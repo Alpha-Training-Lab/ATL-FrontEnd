@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
 import KeyplayersPage from './pages/teams';
@@ -14,6 +15,7 @@ import PrivacyPolicy from './pages/privacy';
 function App() {
   return (
     <div>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/about' element={<AboutPage />} />
