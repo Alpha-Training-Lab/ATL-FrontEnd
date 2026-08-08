@@ -3,7 +3,7 @@ import testimonialData from '../data/testimonials';
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className='flex flex-col p-[20px] gap-[10px] rounded bg-OtherbgColor w-[350px] lg:w-[350px]'>
+    <div className='flex flex-col p-[20px] gap-[10px] border rounded-[20px] bg-OtherBgColor w-[350px] lg:w-[350px]'>
         <div className='flex items-center gap-[10px]'>
             <div>{testimonial.DP}</div>
             <div>

@@ -143,7 +143,7 @@ const HomePage = () => {
             <div className="lg:w-1/2 flex flex-col gap-[20px]">
               {communityFeatures.map((feature, index) => (
                 <div key={index} className="flex flex-col gap-[5px]">
-                  <h5 className="text-2xl md:text-[24px] font-coolvetica">{feature.title}</h5>
+                  <h5 className="text-2xl md:text-[24px]">{feature.title}</h5>
                   <p className="md:text-[16px] text-gray-700">{feature.description}</p>
                 </div>
               ))}
@@ -168,7 +168,7 @@ const HomePage = () => {
               <div key={index} className="flex flex-col items-left gap-5 px-[20px] py-[30px] bg-stepsBgColor rounded-[20px]">
                 <div>{step.icon}</div>
                 <div className="text-left">
-                  <h5 className="text-xl md:text-[24px] md:pr-[100px] md:leading-snug font-coolvetica capitalize mb-2">{step.title}</h5>
+                  <h5 className="text-xl md:text-[24px] md:pr-[100px] md:leading-snug capitalize mb-2">{step.title}</h5>
                   <p className="text-white">{step.description}</p>
                 </div>
               </div>
