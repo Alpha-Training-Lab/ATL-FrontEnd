@@ -3,7 +3,7 @@ import { PrimaryButton } from "./buttons";
 const CTA = () => {
   return (
     <section className="px-[15px] py-[100px] md:px-[30px] lg:px-[60px]">
-      <div className="bg-OtherBgColor rounded-[20px] px-[20px] py-[100px] md:p-[50px] lg:p-[100px] text-center w-full">
+      <div className="border bg-OtherBgColor rounded-[20px] px-[20px] py-[100px] md:p-[50px] lg:p-[100px] text-center w-full">
         <h2 className="text-[40px] leading-tight md:text-3xl lg:text-[48px] mb-8">
           Join the ATL community today!
         </h2>

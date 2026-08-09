@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
 
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/CoolveticaRg-Regular.woff2') format('woff2'),
+       url('/fonts/CoolveticaRg-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/CoolveticaRg-Bold.woff2') format('woff2'),
+       url('/fonts/CoolveticaRg-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/CoolveticaRg-Italic.woff2') format('woff2'),
+       url('/fonts/CoolveticaRg-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/CoolveticaRg-BoldItalic.woff2') format('woff2'),
+       url('/fonts/CoolveticaRg-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,7 +54,11 @@
 }
 
 html, body {
-  @apply text-priText bg-bgColor m-0 p-0 w-full overflow-x-hidden;
+  @apply text-priText bg-bgColor m-0 p-0 w-full overflow-x-hidden font-figtree;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-coolvetica;
 }
 
 a {

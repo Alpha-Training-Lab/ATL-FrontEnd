@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { PrimaryButton } from './buttons';
 import Menu from './Menu';
 import logo from '/Theme=dark.png';
@@ -9,13 +9,20 @@ import logo from '/Theme=dark.png';
 // ------------=======================-----------
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+  const location = useLocation();
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const isActive = (path) =>
+    path === '/blog' ? location.pathname.startsWith('/blog') : location.pathname === path;
+
+  const navLinkClass = (path) =>
+    isActive(path) ? 'text-primary font-semibold' : 'hover:text-primary';
+
   return (
-    <header className="fixed top-0 left-0 flex justify-between items-center w-full px-[15px] md:px-[30px] lg:px-[60px] py-[10px] border-b border-solid bg-white">
+    <header className="fixed top-0 left-0 z-50 flex justify-between items-center w-full px-[15px] md:px-[30px] lg:px-[60px] py-[10px] border-b border-solid bg-white">
       {/* Logo section */}
       <Link onClick={() => window.location.href = '/'}>
         <div className="flex items-center justify-center p-[5px]">
@@ -25,13 +32,12 @@ const Header = () => {
       {/* Navigation and buttons */}
       <div className="flex items-center gap-[2px] md:gap-[20px]">
         {/* Desktop navigation */}
-        <nav className="hidden lg:flex lg:items-center gap-[20px]">
-          <Link to="/" className='hover:text-primary'>Home</Link>
-          <Link to="/about" className='hover:text-primary'>About</Link>
-          <Link to='/testimonial' className='hover:text-primary'>Testimonials</Link>
-          <Link to="/Key players" className='hover:text-primary'>Key Players</Link>
-          <Link to='/blog' className='hover:text-primary'>Blog</Link>
-          <Link to='/maintenance' className='hover:text-primary'>Reach out</Link>
+        <nav className="hidden lg:flex lg:items-center gap-[32px]">
+          <Link to="/" className={navLinkClass('/')}>Home</Link>
+          <Link to="/about" className={navLinkClass('/about')}>About</Link>
+          <Link to='/testimonial' className={navLinkClass('/testimonial')}>Testimonials</Link>
+          <Link to="/Key players" className={navLinkClass('/Key players')}>Key Players</Link>
+          <Link to='/blog' className={navLinkClass('/blog')}>Blog</Link>
         </nav>
 
         <div className="hidden md:block">
